@@ -6,6 +6,7 @@ title VSCode Dev
 pushd %~dp0\..
 
 :: Node modules
+
 if not exist node_modules call .\scripts\npm.bat install
 
 for /f "tokens=2 delims=:," %%a in ('findstr /R /C:"\"nameShort\":.*" product.json') do set NAMESHORT=%%~a
